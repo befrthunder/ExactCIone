@@ -8,3 +8,5 @@ README.Rmd
 inst/doc
 /doc/
 /Meta/
+README.Rmd
+*.Rmd
