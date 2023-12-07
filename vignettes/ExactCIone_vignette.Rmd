@@ -1,0 +1,49 @@
+---
+title: "ExactCIone_vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ExactCIone_vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+## basic example code
+library(ExactCIone)
+# For bin(n,p), construct the CI for p on the observed sample x.
+WbinoCI(x=2,n=5,conf.level=0.95,details=TRUE)
+WbinoCI(x=2,n=5,conf.level=0.95)
+WbinoCI_lower(x=2,n=5,conf.level=0.95,details=TRUE)
+WbinoCI_lower(x=2,n=5,conf.level=0.95)
+########################################################################
+# For pois(lambda), construct the CI for lambda on the observed sample x.
+WpoisCI(x=3,details = TRUE)
+WpoisCI(x=1)
+WpoisCI_lower(x=1)
+WpoisCI_lower(x=3,details = TRUE)
+WpoisCI_upper(x=1)
+WpoisCI_upper(x=3,details = TRUE)
+#######################################################################
+# For hyper(n,x,M,N-M), construct the CI for N on the observed sample x when n,M are known.
+WhyperCI_N(10,50,800,0.95,details=TRUE)
+WhyperCI_N(50,50,800,0.95)
+WhyperCI_N_lower(0,50,800,0.95,details=TRUE)
+WhyperCI_N_lower(0,50,800,0.95)
+WhyperCI_N_upper(0,50,800,0.95,details=TRUE)
+WhyperCI_N_upper(0,50,800,0.95)
+#######################################################################
+# For hyper(n,x,M,N-M), construct the CI for M on the observed sample x when n, N are known.
+WhyperCI_M(0,50,2000,0.95,details = TRUE)
+WhyperCI_M(0,50,2000,0.95)
+WhyperCI_M_lower(0,50,2000,0.95,details = TRUE)
+WhyperCI_M_lower(0,50,2000,0.95)
+WhyperCI_M_upper(0,50,2000,0.95,details = TRUE)
+WhyperCI_M_upper(0,50,2000,0.95)
+```
