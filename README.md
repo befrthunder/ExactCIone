@@ -5,9 +5,9 @@
 
 <!-- badges: start -->
 
-A R package to construct the admissible exact intervals for the binomial
-proportion, the poisson mean and the total number of subjects with a
-certain attribute or the total number of the subjects for the
+An R package to construct the admissible exact intervals for the
+binomial proportion, the poisson mean and the total number of subjects
+with a certain attribute or the total number of the subjects for the
 hypergeometric distribution. Both one-sided and two-sided intervals are
 of interest. This package can be used to calculate the intervals
 constructed methods developed by Wang (2014) and Wang (2015).
