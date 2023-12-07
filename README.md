@@ -62,6 +62,7 @@ WbinoCI_lower(x=2,n=5,conf.level=0.95)
 #> $CI
 #>      sample      lower upper
 #> [1,]      2 0.05274495     1
+########################################################################
 # For pois(lambda), construct the CI for lambda on the observed sample x.
 WpoisCI(x=3,details = TRUE)
 #> $CI
@@ -111,6 +112,7 @@ WpoisCI_upper(x=3,details = TRUE)
 #> [2,]      1     0 4.743865
 #> [3,]      2     0 6.295794
 #> [4,]      3     0 7.753657
+#######################################################################
 # For hyper(n,x,M,N-M), construct the CI for N on the observed sample x when n,M are known.
 WhyperCI_N(10,50,800,0.95,details=TRUE)
 #> $CI
@@ -301,6 +303,7 @@ WhyperCI_N_upper(0,50,800,0.95)
 #> $CI
 #>      x      
 #> [1,] 0 0 Inf
+#######################################################################
 # For hyper(n,x,M,N-M), construct the CI for M on the observed sample x when n, N are known.
 WhyperCI_M(0,50,2000,0.95,details = TRUE)
 #> $CI
