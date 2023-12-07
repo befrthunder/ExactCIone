@@ -39,6 +39,4 @@ WhyperCI_N(50,50,800,0.95)
 Wang, W. (2015). Exact Optimal Confidence Intervals for
 Hypergeometric Parameters. "Journal of the American Statistical
 Association" 110 (512): 1491-1499.
-
-wang(2015)
 }

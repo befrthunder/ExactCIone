@@ -1,4 +1,3 @@
-
 lcp_bino<-function(x,n,alpha,prec2=1e-12){
   if(length(x)>1){
     re<-x

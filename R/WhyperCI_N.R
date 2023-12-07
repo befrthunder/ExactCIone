@@ -284,7 +284,6 @@ WhyperCITwo_N_core<-function(x,n,M,alpha){
 #' @export
 #' @examples WhyperCI_N(10,50,800,0.95,details=TRUE)
 #' @examples WhyperCI_N(50,50,800,0.95)
-#' @references wang(2015)
 WhyperCI_N<-function(x,n,M,conf.level,details=FALSE){
   alpha<-1-conf.level
   if(details==TRUE){
