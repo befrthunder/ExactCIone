@@ -19,7 +19,7 @@ You can install the development version of ExactCIone like so:
 
 ``` r
 library("devtools")
-install_github("befrthunder/ExactCIone")
+install_github("befrthunder/ExactCIone",dependencies =TRUE, build_vignettes = TRUE)
 ```
 
 ## Example
