@@ -98,3 +98,20 @@ WhyperCI_M_upper(X=0,n=50,N=2000,0.95)
 WhyperCI_M_upper(X=0,n=50,N=2000,0.95,details = TRUE)
 
 ```
+## Reference
+
+Clopper, C. J. and Pearson, E. S. (1934). The use of confidence or fiducial limits in the case of the binomial. "Biometrika" 26: 404-413.
+
+Garwood, F. (1936). Fiducial Limits for the Poisson Distribution. "Biometrika" 28:	437-442.
+
+Konijn, H. S. (1973). Statistical Theory of Sample Survey Design and Analysis, Amsterdam: North-Holland.
+
+Wang, W. (2014). An iterative construction of confidence intervals for a proportion. "Statistica Sinica" 24: 1389-1410.
+
+Wang, W. (2015). Exact Optimal Confidence Intervals for Hypergeometric Parameters. "Journal of the American Statistical Association" 110 (512): 1491-1499.
+ 
+
+
+
+
+
