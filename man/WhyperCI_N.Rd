@@ -31,6 +31,13 @@ in an urn, which is the population number of a hypergeometric distribution. This
 function can be used to calculate the interval constructed method proposed
 by Wang (2015).
 }
+\details{
+Suppose X~Hyper(M,N,n). When M and n are known, Wang (2015) construct an
+admissible confidence interval for N by uniformly shrinking the initial 1-alpha
+Clopper-Pearson type interval from  0 to min(M,n). This interval is admissible so
+that any proper sub-interval of it cannot assure the confidence coefficient. This
+means the interval cannot be shortened anymore.
+}
 \examples{
 WhyperCI_N(10,50,800,0.95,details=TRUE)
 WhyperCI_N(50,50,800,0.95)
