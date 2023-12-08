@@ -267,6 +267,11 @@ WhyperCITwo_N_core<-function(x,n,M,alpha){
 #'   in an urn, which is the population number of a hypergeometric distribution. This
 #'   function can be used to calculate the interval constructed method proposed
 #'   by Wang (2015).
+#' @details Suppose X~Hyper(M,N,n). When M and n are known, Wang (2015) construct an
+#' admissible confidence interval for N by uniformly shrinking the initial 1-alpha
+#' Clopper-Pearson type interval from  0 to min(M,n). This interval is admissible so
+#' that any proper sub-interval of it cannot assure the confidence coefficient. This
+#' means the interval cannot be shortened anymore.
 #' @param x integer representing the number of white balls in the drawn balls.
 #' @param n integer representing the number of balls we draw in the urn without
 #'   replacement, i.e., the sample size.

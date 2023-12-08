@@ -150,6 +150,12 @@ WhyperCI_M_core<-function(N,n,X,alpha){
 #'   that contains M white balls and  N-M black balls when sampling without
 #'   replacement. This function can be used to calculate the interval
 #'   constructed method proposed by Wang (2015).
+#' @details Suppose X~Hyper(M,N,n). When N and n are known, Wang (2015) construct an
+#' admissible confidence interval for N by uniformly shrinking the initial 1-alpha
+#' Clopper-Pearson type interval from  the mid-point of the sample space to 0. This interval
+#' is admissible so that any proper sub-interval of it cannot assure the confidence coefficient. This
+#' means the interval cannot be shortened anymore.
+#'
 #' @references Wang, W. (2015). Exact Optimal Confidence Intervals for
 #'   Hypergeometric Parameters. "Journal of the American Statistical
 #'   Association" 110 (512): 1491-1499.
