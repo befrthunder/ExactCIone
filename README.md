@@ -28,7 +28,7 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(ExactCIone)
-# For bin(n,p), construct the CI for p on the observed sample x.
+# For bin(n,p), construct 95% admissible CI for p on the observed sample x=2 when n=5.
 WbinoCI(x=2,n=5,conf.level=0.95,details=TRUE)
 #> $CI
 #>      x     lower     upper
@@ -63,7 +63,7 @@ WbinoCI_lower(x=2,n=5,conf.level=0.95)
 #>      sample      lower upper
 #> [1,]      2 0.05274495     1
 ########################################################################
-# For pois(lambda), construct the CI for lambda on the observed sample x.
+# For pois(lambda), construct 95% admissible CI for lambda on the observed sample x=3.
 WpoisCI(x=3,details = TRUE)
 #> $CI
 #>      x     lower    upper
@@ -113,7 +113,7 @@ WpoisCI_upper(x=3,details = TRUE)
 #> [3,]      2     0 6.295794
 #> [4,]      3     0 7.753657
 #######################################################################
-# For hyper(n,x,M,N-M), construct the CI for N on the observed sample x when n,M are known.
+# For hyper(n,x,M,N-M), construct 95% admissible CI for N on the observed sample x=10 when n=50,M=800.
 WhyperCI_N(10,50,800,0.95,details=TRUE)
 #> $CI
 #>       x lower upper
@@ -304,7 +304,7 @@ WhyperCI_N_upper(0,50,800,0.95)
 #>      x      
 #> [1,] 0 0 Inf
 #######################################################################
-# For hyper(n,x,M,N-M), construct the CI for M on the observed sample x when n, N are known.
+# For hyper(n,x,M,N-M), construct 95% admissible CI for M on the observed sample x=0 when n=50, N=2000.
 WhyperCI_M(0,50,2000,0.95,details = TRUE)
 #> $CI
 #>      X lower upper
