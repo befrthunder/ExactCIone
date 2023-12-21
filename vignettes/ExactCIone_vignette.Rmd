@@ -67,17 +67,17 @@ WpoisCI_upper(x=3,conf.level = 0.95,details = TRUE)
 Suppose $X\sim Hyper(M,N,n)$. The sample space is $\{0,\ldots,\min(M,n)\}$. When $M$ and $n$ are known, Wang (2015) construct an admissible confidence interval for $N$ by uniformly shrinking the initial $1-\alpha$ Clopper-Pearson type interval from  0 to $\min(M,n)$. Also this interval cannot be shortened more.
 ```{r}
 # For hyper(M,N,n), construct 95% CI for N on the observed sample x when n,M are known.
-WhyperCI_N(x=50,n=50,M=800,conf.level = 0.95)
+WhyperCI_N(x=5,n=10,M=800,conf.level = 0.95)
 # It shows CIs for all the sample point When "details=TRUE".
-WhyperCI_N(x=10,n=50,M=800,conf.level = 0.95,details=TRUE)
+WhyperCI_N(x=5,n=10,M=800,conf.level = 0.95,details=TRUE)
 ```
 
 The one-sided $1-\alpha$ CI for $N$ is the one-sided Clopper-Pearson type interval (Konijn, 1973).
 ```{r}
-WhyperCI_N_lower(x=0,n=50,M=800,conf.level = 0.95)
-WhyperCI_N_lower(x=0,n=50,M=800,conf.level = 0.95,details=TRUE)
-WhyperCI_N_upper(x=0,n=50,M=800,conf.level = 0.95)
-WhyperCI_N_upper(x=0,n=50,M=800,conf.level = 0.95,details=TRUE)
+WhyperCI_N_lower(x=0,n=10,M=800,conf.level = 0.95)
+WhyperCI_N_lower(x=0,n=10,M=800,conf.level = 0.95,details=TRUE)
+WhyperCI_N_upper(x=0,n=10,M=800,conf.level = 0.95)
+WhyperCI_N_upper(x=0,n=10,M=800,conf.level = 0.95,details=TRUE)
 ```
 
 
@@ -86,15 +86,15 @@ Suppose $X\sim Hyper(M,N,n)$. When N and n are known, Wang (2015) construct an a
 ```{R}
 # For Hyper(M,N,n), construct the CI for M on the observed sample x when n, N are known. 
 # Also output CI for p=M/N.
-WhyperCI_M(x=0,n=50,N=2000,conf.level = 0.95)
-WhyperCI_M(x=0,n=50,N=2000,conf.level = 0.95,details = TRUE)
+WhyperCI_M(x=0,n=10,N=2000,conf.level = 0.95)
+WhyperCI_M(x=0,n=10,N=2000,conf.level = 0.95,details = TRUE)
 ```
 The one-sided $1-\alpha$ CI for $M$ is the one-sided Clopper-Pearson type interval (Konijn, 1973).
 ```{R}
-WhyperCI_M_lower(X=0,n=50,N=2000,conf.level = 0.95)
-WhyperCI_M_lower(X=0,n=50,N=2000,conf.level = 0.95,details = TRUE)
-WhyperCI_M_upper(X=0,n=50,N=2000,conf.level = 0.95)
-WhyperCI_M_upper(X=0,n=50,N=2000,conf.level = 0.95,details = TRUE)
+WhyperCI_M_lower(X=0,n=10,N=2000,conf.level = 0.95)
+WhyperCI_M_lower(X=0,n=10,N=2000,conf.level = 0.95,details = TRUE)
+WhyperCI_M_upper(X=0,n=10,N=2000,conf.level = 0.95)
+WhyperCI_M_upper(X=0,n=10,N=2000,conf.level = 0.95,details = TRUE)
 
 ```
 ## Reference
