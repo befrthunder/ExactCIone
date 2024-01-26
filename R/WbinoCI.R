@@ -100,53 +100,53 @@ WbinoCITwo_core<-function(x,n,alpha){
     b0<-ucp1n[ss]
     b1<-ucpw[ss]   # b1>b0. the final upper limit is between b1 and b0.
 
-    while (a1-a0>prec1|b1-b0>prec1){ # solve the lower limit
+    while (a1-a0>prec1){ # solve the lower limit
       lcpw0<-lcpw
       ucpw0<-ucpw
 
       aa<-(a0+a1)/2
       lcpw[ss]<-aa
       ucpw[n+2-ss]<-1-aa
-      bb<-(b0+b1)/2
-      ucpw[ss]<-bb
-      lcpw[n+2-ss]<-1-bb
-
       ind_ss1<-which(lcpw[(ss+1):(n+2-ss-1)]<aa)
       if(length(ind_ss1)>0) lcpw[(ss+1):(n+2-ss-1)][ind_ss1]<-aa
 
+      ucpw<-1-lcpw[(n+1):1]
+
+
+      L0<-aa
+      pp<-c(L0-prec2,(ucpw+prec2)[which(ucpw<=L0 & ucpw>=a0)])  #(4)
+      cp<-sapply(pp,cpcig_bino,lcin=lcpw,ucin=ucpw,n=n)
+      minic<-min(cp)
+      if (minic>1-alpha){
+         a0<-aa
+      }else{
+        a1<-aa
+        lcpw[(ss+1):(n+2-ss-1)][ind_ss1]<-lcpw0[(ss+1):(n+2-ss-1)][ind_ss1]
+        ucpw<-1-lcpw[(n+1):1]
+       }
+    }
+    while (b1-b0>prec1){
+      lcpw0<-lcpw
+      ucpw0<-ucpw
+      bb<-(b0+b1)/2
+      ucpw[ss]<-bb
+      lcpw[n+2-ss]<-1-bb
       ind_ss2<-which(lcpw[(n+2-ss+1):(n+1)]<1-bb)
       if(length(ind_ss2)>0) lcpw[(n+2-ss+1):(n+1)][ind_ss2]<-1-bb
 
       ucpw<-1-lcpw[(n+1):1]
 
-      if(a1-a0>prec1){
-        L0<-aa
-        pp<-c(L0-prec2,(ucpw+prec2)[which(ucpw<=L0 & ucpw>=a0)])  #(4)
-        cp<-sapply(pp,cpcig_bino,lcin=lcpw,ucin=ucpw,n=n)
-        minic<-min(cp)
-        if (minic>1-alpha){
-          a0<-aa
-        }else{
-          a1<-aa
-          lcpw[(ss+1):(n+2-ss-1)][ind_ss1]<-lcpw0[(ss+1):(n+2-ss-1)][ind_ss1]
-          ucpw<-1-lcpw[(n+1):1]
-        }
+      u0<-bb;
+      pp<-c(u0+prec2,(lcpw-prec2)[which(lcpw>=u0 & lcpw<=b1)])   #(4)
+      cp<-sapply(pp,cpcig_bino,lcin=lcpw,ucin=ucpw,n=n)
+      minic<-min(cp)
+      if (minic>=1-alpha){
+        b1<-bb
+      }else {
+        b0<-bb
+        lcpw[min((n+2-ss+1),n+1):(n+1)][ind_ss2]<-lcpw0[min((n+2-ss+1),n+1):(n+1)][ind_ss2]
+        ucpw<-1-lcpw[(n+1):1]
       }
-
-      if(b1-b0>prec1){
-        u0<-bb;
-        pp<-c(u0+prec2,(lcpw-prec2)[which(lcpw>=u0 & lcpw<=b1)])   #(4)
-        cp<-sapply(pp,cpcig_bino,lcin=lcpw,ucin=ucpw,n=n)
-        minic<-min(cp)
-        if (minic>=1-alpha){
-          b1<-bb
-        }else {
-          b0<-bb
-          lcpw[min((n+2-ss+1),n+1):(n+1)][ind_ss2]<-lcpw0[min((n+2-ss+1),n+1):(n+1)][ind_ss2]
-          ucpw<-1-lcpw[(n+1):1]
-        }
-      }
-
     }
 
     lcpw[ss]<-a0
