@@ -78,8 +78,14 @@ WbinoCITwo_core<-function(x,n,alpha){
 
       L0<-aa
       pp<-c(L0-prec2,(ucpw+prec2)[which(ucpw<=L0 & ucpw>=a0)])   #(4)
+      cp=0*pp
+      kkk=1
+      while (kkk<n+1+0.5){
+        cp=cp+ind(pp,lcpw[kkk],ucpw[kkk])*stats::dbinom(kkk-1,n,pp)
+        kkk=kkk+1
+      }
 
-      cp<-sapply(pp,cpcig_bino,lcin=lcpw,ucin=ucpw,n=n)
+      #cp<-sapply(pp,cpcig_bino,lcin=lcpw,ucin=ucpw,n=n)
       minic<-min(cp)
       if (minic>=1-alpha){a0<-aa}else{
         a1<-aa
@@ -117,7 +123,14 @@ WbinoCITwo_core<-function(x,n,alpha){
 
       L0<-aa
       pp<-c(L0-prec2,(ucpw+prec2)[which(ucpw<=L0 & ucpw>=a0)])  #(4)
-      cp<-sapply(pp,cpcig_bino,lcin=lcpw,ucin=ucpw,n=n)
+      cp=0*pp
+      kkk=1
+      while (kkk<n+1+0.5){
+        cp=cp+ind(pp,lcpw[kkk],ucpw[kkk])*stats::dbinom(kkk-1,n,pp)
+        kkk=kkk+1
+      }
+
+      #cp<-sapply(pp,cpcig_bino,lcin=lcpw,ucin=ucpw,n=n)
       minic<-min(cp)
       if (minic>1-alpha){
          a0<-aa
@@ -142,7 +155,14 @@ WbinoCITwo_core<-function(x,n,alpha){
 
       u0<-bb;
       pp<-c(u0+prec2,(lcpw-prec2)[which(lcpw>=u0 & lcpw<=b1)])   #(4)
-      cp<-sapply(pp,cpcig_bino,lcin=lcpw,ucin=ucpw,n=n)
+      cp=0*pp
+      kkk=1
+      while (kkk<n+1+0.5){
+        cp=cp+ind(pp,lcpw[kkk],ucpw[kkk])*stats::dbinom(kkk-1,n,pp)
+        kkk=kkk+1
+      }
+
+      #cp<-sapply(pp,cpcig_bino,lcin=lcpw,ucin=ucpw,n=n)
       minic<-min(cp)
       if (minic>=1-alpha){
         b1<-bb
