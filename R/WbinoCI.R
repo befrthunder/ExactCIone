@@ -71,8 +71,10 @@ WbinoCITwo_core<-function(x,n,alpha){
       ucpw[ss]<-1-aa
 
       ind_ss<-which(lcpw[(ss+1):(n+1)]<aa)
-      if(length(ind_ss)>0) lcpw[(ss+1):(n+1)][ind_ss]<-aa
-      ucpw<-1-lcpw[(n+1):1]
+      if(length(ind_ss)>0){
+        lcpw[(ss+1):(n+1)][ind_ss]<-aa
+        ucpw<-1-lcpw[(n+1):1]
+      }
 
       L0<-aa
       pp<-c(L0-prec2,(ucpw+prec2)[which(ucpw<=L0 & ucpw>=a0)])   #(4)
@@ -108,9 +110,9 @@ WbinoCITwo_core<-function(x,n,alpha){
       lcpw[ss]<-aa
       ucpw[n+2-ss]<-1-aa
       ind_ss1<-which(lcpw[(ss+1):(n+2-ss-1)]<aa)
-      if(length(ind_ss1)>0) lcpw[(ss+1):(n+2-ss-1)][ind_ss1]<-aa
-
-      ucpw<-1-lcpw[(n+1):1]
+      if(length(ind_ss1)>0){
+        lcpw[(ss+1):(n+2-ss-1)][ind_ss1]<-aa
+        ucpw<-1-lcpw[(n+1):1]}
 
 
       L0<-aa
@@ -125,6 +127,8 @@ WbinoCITwo_core<-function(x,n,alpha){
         ucpw<-1-lcpw[(n+1):1]
        }
     }
+    lcpw[ss]<-a0
+    ucpw[n+2-ss]<-1-lcpw[ss]
     while (b1-b0>prec1){
       lcpw0<-lcpw
       ucpw0<-ucpw
@@ -132,9 +136,9 @@ WbinoCITwo_core<-function(x,n,alpha){
       ucpw[ss]<-bb
       lcpw[n+2-ss]<-1-bb
       ind_ss2<-which(lcpw[(n+2-ss+1):(n+1)]<1-bb)
-      if(length(ind_ss2)>0) lcpw[(n+2-ss+1):(n+1)][ind_ss2]<-1-bb
-
-      ucpw<-1-lcpw[(n+1):1]
+      if(length(ind_ss2)>0){
+        lcpw[(n+2-ss+1):(n+1)][ind_ss2]<-1-bb
+        ucpw<-1-lcpw[(n+1):1]}
 
       u0<-bb;
       pp<-c(u0+prec2,(lcpw-prec2)[which(lcpw>=u0 & lcpw<=b1)])   #(4)
@@ -149,8 +153,7 @@ WbinoCITwo_core<-function(x,n,alpha){
       }
     }
 
-    lcpw[ss]<-a0
-    ucpw[n+2-ss]<-1-lcpw[ss]
+
     ucpw[ss]<-b1
     lcpw[n+2-ss]<-1-ucpw[ss]
 
