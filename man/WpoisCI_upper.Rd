@@ -2,7 +2,7 @@
 % Please edit documentation in R/WpoisCI.R
 \name{WpoisCI_upper}
 \alias{WpoisCI_upper}
-\title{An admissible exact one-sided upper confidence interval for poisson mean}
+\title{An Admissible Exact One-sided Upper Confidence Interval for Poisson Mean}
 \usage{
 WpoisCI_upper(x, conf.level = 0.95, details = FALSE)
 }
@@ -18,7 +18,7 @@ the confidence intervals for all the sample points. Default is FALSE.}
 a list which contain the one-sided upper confidence interval.
 }
 \description{
-The 1-alpha Clopper-Pearson type upper interval for the poisson
+The 1-alpha Clopper-Pearson type upper interval for the Poisson
 mean.
 }
 \examples{

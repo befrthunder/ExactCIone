@@ -2,7 +2,7 @@
 % Please edit documentation in R/WhyperCI_N.R
 \name{WhyperCI_N_upper}
 \alias{WhyperCI_N_upper}
-\title{An admissible exact one-sided upper interval for the population number of hypergeometric distribution}
+\title{An Admissible Exact One-sided Upper Interval for the Population Number of Hypergeometric Distribution}
 \usage{
 WhyperCI_N_upper(x, n, M, conf.level, details = FALSE)
 }

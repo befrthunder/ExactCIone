@@ -2,7 +2,7 @@
 % Please edit documentation in R/WpoisCI.R
 \name{WpoisCI}
 \alias{WpoisCI}
-\title{An admissible exact confidence interval for the poisson mean}
+\title{An Admissible Exact Confidence Interval for the Poisson Mean}
 \usage{
 WpoisCI(x, conf.level = 0.95, details = FALSE)
 }
@@ -18,7 +18,7 @@ the confidence intervals for all the sample points. Default is FALSE.}
 a list which contain the confidence interval and the ICP.
 }
 \description{
-An admissible exact confidence interval for the poisson mean.
+An admissible exact confidence interval for the Poisson mean.
 This function can be used to calculate the interval constructed method
 proposed by Wang (2014).
 }

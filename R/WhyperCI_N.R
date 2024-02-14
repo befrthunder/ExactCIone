@@ -261,7 +261,7 @@ WhyperCITwo_N_core<-function(x,n,M,alpha){
 }
 
 
-#' An admissible exact confidence interval for N, the number of balls in an urn.
+#' An Admissible Exact Confidence Interval for N, the Number of Balls in an Urn.
 #'
 #' @description An admissible exact confidence interval for the number of balls
 #'   in an urn, which is the population number of a hypergeometric distribution. This
@@ -307,8 +307,8 @@ WhyperCI_N<-function(x,n,M,conf.level,details=FALSE){
 
 }
 
-#' An admissible exact one-sided lower interval for the population number of
-#' hypergeometric distribution
+#' An Admissible Exact One-sided Lower Interval for the Population Number of
+#' Hypergeometric Distribution
 #' @description The 1-alpha Clopper-Pearson type lower interval for the
 #'   population number of hypergeometric distribution.
 #' @references Konijn, H. S. (1973). Statistical Theory of Sample Survey Design
@@ -353,7 +353,7 @@ WhyperCI_N_lower<-function(x,n,M,conf.level,details=FALSE){
 }
 
 
-#' An admissible exact one-sided upper interval for the population number of hypergeometric distribution
+#' An Admissible Exact One-sided Upper Interval for the Population Number of Hypergeometric Distribution
 #' @description The 1-alpha Clopper-Pearson type upper interval for the
 #'   population number of hypergeometric distribution.
 #' @references Konijn, H. S. (1973). Statistical Theory of Sample Survey Design

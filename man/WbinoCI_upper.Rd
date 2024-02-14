@@ -2,7 +2,7 @@
 % Please edit documentation in R/WbinoCI.R
 \name{WbinoCI_upper}
 \alias{WbinoCI_upper}
-\title{An admissible exact upper interval for the binomial proportion}
+\title{An Admissible Exact Upper Interval for the Binomial Proportion}
 \usage{
 WbinoCI_upper(x, n, conf.level = 0.95, details = FALSE)
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/WbinoCI.R
 \name{WbinoCI}
 \alias{WbinoCI}
-\title{An admissible exact confidence interval for the binomial proportion}
+\title{An Admissible Exact Confidence Interval for the Bnomial Proportion}
 \usage{
 WbinoCI(x, n, conf.level = 0.95, details = FALSE)
 }

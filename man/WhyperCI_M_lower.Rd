@@ -2,7 +2,7 @@
 % Please edit documentation in R/WhyperCI_M.R
 \name{WhyperCI_M_lower}
 \alias{WhyperCI_M_lower}
-\title{An admissible exact one-sided lower interval for the number of white balls in hypergeometric distribution}
+\title{An Admissible Exact One-sided Lower Interval for the Number of White Balls in Hypergeometric Distribution}
 \usage{
 WhyperCI_M_lower(X, n, N, conf.level, details = FALSE)
 }

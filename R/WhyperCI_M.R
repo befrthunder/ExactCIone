@@ -143,8 +143,8 @@ WhyperCI_M_core<-function(N,n,X,alpha){
 }
 
 
-#' An admissible exact confidence interval for M, the number of white balls in
-#' an urn
+#' An Admissible Exact Confidence Interval for M, the Number of White Balls in
+#' an Urn
 #'
 #' @description The confidence interval for the number of white balls in an urn
 #'   that contains M white balls and  N-M black balls when sampling without
@@ -199,7 +199,7 @@ WhyperCI_M<-function(x,n,N,conf.level,details=FALSE){
 
 }
 
-#' An admissible exact one-sided lower interval for the number of white balls in hypergeometric distribution
+#' An Admissible Exact One-sided Lower Interval for the Number of White Balls in Hypergeometric Distribution
 #' @description The 1-alpha Clopper-Pearson type lower interval for the
 #'   number of white balls in an urn.
 #' @param N integer representing the number of the whole balls in an urn.
@@ -228,7 +228,7 @@ WhyperCI_M_lower<-function(X,n,N,conf.level,details=FALSE){
   }
 }
 
-#' An admissible exact one-sided upper interval for the number of white balls in hypergeometric distribution
+#' An Admissible Exact One-sided Upper Interval for the Number of White Balls in Hypergeometric Distribution
 #' @description The 1-alpha Clopper-Pearson type upper interval for the
 #'   number of white balls in an urn.
 #' @param N integer representing the number of the whole balls in an urn.

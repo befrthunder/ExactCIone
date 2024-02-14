@@ -2,7 +2,7 @@
 % Please edit documentation in R/WhyperCI_N.R
 \name{WhyperCI_N}
 \alias{WhyperCI_N}
-\title{An admissible exact confidence interval for N, the number of balls in an urn.}
+\title{An Admissible Exact Confidence Interval for N, the Number of Balls in an Urn.}
 \usage{
 WhyperCI_N(x, n, M, conf.level, details = FALSE)
 }

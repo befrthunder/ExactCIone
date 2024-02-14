@@ -137,8 +137,8 @@ WpoisCI_core<-function(x,alpha){
 }
 
 
-#' An admissible exact confidence interval for the poisson mean
-#' @description An admissible exact confidence interval for the poisson mean.
+#' An Admissible Exact Confidence Interval for the Poisson Mean
+#' @description An admissible exact confidence interval for the Poisson mean.
 #'   This function can be used to calculate the interval constructed method
 #'   proposed by Wang (2014).
 #' @details Suppose X~poi(lambda), the sample space of X is \{0,1,...\}. Wang
@@ -175,8 +175,8 @@ WpoisCI<-function(x,conf.level=0.95,details=FALSE){
 
 
 
-#' An admissible exact one-sided lower confidence interval for poisson mean
-#' @description The 1-alpha Clopper-Pearson type lower interval for the poisson
+#' An Admissible Exact One-sided Lower Confidence Interval for Poisson Mean
+#' @description The 1-alpha Clopper-Pearson type lower interval for the Poisson
 #'   mean.
 #' @param x the sample or the observed point.
 #' @param conf.level confidence level. The default is 0.95.
@@ -206,8 +206,8 @@ WpoisCI_lower<-function(x,conf.level=0.95,details=FALSE){
 }
 
 
-#' An admissible exact one-sided upper confidence interval for poisson mean
-#' @description The 1-alpha Clopper-Pearson type upper interval for the poisson
+#' An Admissible Exact One-sided Upper Confidence Interval for Poisson Mean
+#' @description The 1-alpha Clopper-Pearson type upper interval for the Poisson
 #'   mean.
 #' @param x the sample or the observed point.
 #' @param conf.level confidence level. The default is 0.95.

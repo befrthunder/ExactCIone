@@ -2,7 +2,7 @@
 % Please edit documentation in R/WbinoCI.R
 \name{WbinoCI_lower}
 \alias{WbinoCI_lower}
-\title{An admissible exact lower interval for the binomial proportion}
+\title{An Admissible Exact Lower Interval for the Binomial Proportion}
 \usage{
 WbinoCI_lower(x, n, conf.level = 0.95, details = FALSE)
 }

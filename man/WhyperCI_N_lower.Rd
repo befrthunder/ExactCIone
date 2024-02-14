@@ -2,8 +2,8 @@
 % Please edit documentation in R/WhyperCI_N.R
 \name{WhyperCI_N_lower}
 \alias{WhyperCI_N_lower}
-\title{An admissible exact one-sided lower interval for the population number of
-hypergeometric distribution}
+\title{An Admissible Exact One-sided Lower Interval for the Population Number of
+Hypergeometric Distribution}
 \usage{
 WhyperCI_N_lower(x, n, M, conf.level, details = FALSE)
 }

@@ -2,8 +2,8 @@
 % Please edit documentation in R/WhyperCI_M.R
 \name{WhyperCI_M}
 \alias{WhyperCI_M}
-\title{An admissible exact confidence interval for M, the number of white balls in
-an urn}
+\title{An Admissible Exact Confidence Interval for M, the Number of White Balls in
+an Urn}
 \usage{
 WhyperCI_M(x, n, N, conf.level, details = FALSE)
 }

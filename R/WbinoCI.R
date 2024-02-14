@@ -184,7 +184,7 @@ WbinoCITwo_core<-function(x,n,alpha){
   re
 }
 
-#' An admissible exact confidence interval for the binomial proportion
+#' An Admissible Exact Confidence Interval for the Bnomial Proportion
 #' @description An admissible exact confidence interval of level 1-alpha is
 #'   constructed for the binomial proportion p. This function can be used to
 #'   calculate the interval constructed method proposed by Wang (2014).
@@ -229,7 +229,7 @@ WbinoCI<-function(x,n,conf.level=0.95,details=FALSE){
 
 
 
-#' An admissible exact lower interval for the binomial proportion
+#' An Admissible Exact Lower Interval for the Binomial Proportion
 #' @description The 1-alpha Clopper-Pearson lower interval for the binomial
 #'   proportion p.
 #' @param x the number of success or the observed data.
@@ -261,7 +261,7 @@ WbinoCI_lower<-function(x,n,conf.level=0.95,details=FALSE){
   re
 }
 
-#' An admissible exact upper interval for the binomial proportion
+#' An Admissible Exact Upper Interval for the Binomial Proportion
 #' @description The 1-alpha Clopper-Pearson upper interval for the binomial
 #'   proportion p.
 #' @param x the number of success or the observed data.
